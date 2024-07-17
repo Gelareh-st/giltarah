@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="src/js/cdn.tailwindcss.com.4.3.js"></script>
+    <script src="src/js/tailwind.js"></script>
+    <script src="src/js/countdown.js" defer></script>
+    <title>ورود / ثبت نام</title>
+  </head>
+  <body class="h-screen md:flex md:items-center md:justify-center bg-[#fbfbfb]">
+    <div class="h-full md:max-w-[500px] lg:w-[500px] md:h-auto">
+      <div
+        class="p-4 border-b shadow-lg flex items-center md:shadow-none md:border-0 md:mb-4"
+      >
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M19 5L5 19M5 5L19 19"
+              stroke="#d0021b"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col items-center justify-center h-full p-4">
+        <h1 class="font-bold text-2xl text-cent md:mb-6">ورود یا ثبت نام</h1>
+        <p class="text-slate-500 font-semibold text-sm mt-2 mb-4">
+          کد 6 رقمی به شماره موبایل 09323215212 ارسال شد.
+        </p>
+        <a href="login-signup.html" class="text-blue-400 text-xs mt-6 font-bold"
+          >اصلاح شماره موبایل</a
+        >
+        <form action="" class="my-4 w-full space-y-4">
+          <div class="flex items-center justify-center gap-2" dir="ltr">
+            <input
+              class="p-4 rounded shadow-sm border min-w-0 text-center font-bold text-xl"
+              maxlength="1"
+              autofocus
+              onkeyup="focusNext(this,event)"
+            />
+            <input
+              class="p-4 rounded shadow-sm border min-w-0 text-center font-bold text-xl"
+              maxlength="1"
+              onkeyup="focusNext(this, event)"
+            />
+            <input
+              class="p-4 rounded shadow-sm border min-w-0 text-center font-bold text-xl"
+              maxlength="1"
+              onkeyup="focusNext(this, event)"
+            />
+            <input
+              class="p-4 rounded shadow-sm border min-w-0 text-center font-bold text-xl"
+              maxlength="1"
+              onkeyup="focusNext(this, event)"
+            />
+            <input
+              class="p-4 rounded shadow-sm border min-w-0 text-center font-bold text-xl"
+              maxlength="1"
+              onkeyup="focusNext(this, event)"
+            />
+            <input
+              class="p-4 rounded shadow-sm border min-w-0 text-center font-bold text-xl"
+              maxlength="1"
+              onkeyup="focusNext(this, event)"
+            />
+          </div>
+          <div>
+            <span
+              id="timer"
+              class="font-bold text-xl w-full block text-center my-6"
+            >
+              <span id="counter"></span>
+              ثانیه
+            </span>
+          </div>
+          <button
+            type="submit"
+            class="bg-green-400 rounded py-4 px-6 text-white block w-full shadow-sm"
+          >
+            تایید و ادامه
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

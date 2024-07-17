@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنل مشتری - داشبورد</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body class="h-screen text-white bg-[#f2f2f2]">
+    <div class="lg:grid grid-cols-[auto,1fr]">
+      <aside
+        id="sidebar"
+        class="fixed shadow-2xl lg:sticky right-0 top-0 h-screen w-2/4 md:w-[270px] max-w-[270px] bg-white p-6 flex flex-col gap-10 overflow-y-auto z-50 hidden lg:flex"
+      >
+        <div
+          class="absolute -top-14 left-0 w-full h-[250px]"
+          style="
+            border-radius: 3500px/251px !important;
+            background-image: linear-gradient(
+              -135deg,
+              #21254e,
+              #232c58 19%,
+              #232c58 0,
+              #232c58 0,
+              #232d5a 23%,
+              #232d5a 0,
+              #24305d 40%,
+              #24305d 0,
+              #24305d 0,
+              #2b4a83 87%
+            ) !important;
+          "
+        ></div>
+        <div
+          class="flex items-center justify-between lg:hidden absolute top-4 right-4"
+        >
+          <button id="collapse-sidebar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M17.2599 10.2467L19.0132 8.49341C19.4209 8.08577 19.6247 7.88196 19.747 7.66993C20.3627 6.60365 19.7517 5.72522 19.0132 4.98681C18.2747 4.24828 17.3964 3.63732 16.33 4.25295C16.118 4.37537 15.9142 4.57918 15.5066 4.98681L13.7533 6.7401C12.9268 7.56662 12.5136 7.97988 12 7.97988C11.4864 7.97988 11.0732 7.56662 10.2467 6.7401L8.49341 4.98681C8.08577 4.57918 7.88196 4.37537 7.66993 4.25295C6.60357 3.63729 5.7253 4.24833 4.98681 4.98681C4.24833 5.7253 3.63729 6.60358 4.25295 7.66993C4.37537 7.88196 4.57918 8.08577 4.98681 8.49341L6.7401 10.2467C7.56662 11.0732 7.97987 11.4864 7.97987 12C7.97987 12.5136 7.56662 12.9268 6.7401 13.7533L4.98681 15.5066C4.57918 15.9142 4.37537 16.118 4.25295 16.33C3.63732 17.3964 4.24827 18.2747 4.98681 19.0132C5.72522 19.7517 6.60365 20.3627 7.66993 19.747C7.88196 19.6247 8.08577 19.4209 8.49341 19.0132L10.2467 17.2599C11.0732 16.4334 11.4864 16.0201 12 16.0201C12.5136 16.0201 12.9268 16.4334 13.7533 17.2599L15.5066 19.0132C15.9142 19.4209 16.118 19.6247 16.33 19.747C17.3964 20.3627 18.2748 19.7518 19.0132 19.0132C19.7518 18.2748 20.3627 17.3964 19.747 16.33C19.6247 16.118 19.4209 15.9142 19.0132 15.5066C18.2124 14.7058 16.0201 13.2175 16.0201 12C16.0201 11.4864 16.4334 11.0732 17.2599 10.2467Z"
+                stroke="#FFF"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex flex-col gap-2 items-center relative justify-center mt-10"
+        >
+          <img
+            src="/assets/avatar.jpg"
+            alt=""
+            width="80"
+            class="rounded-full"
+          />
+          <p class="text-sm">علی احمدی</p>
+        </div>
+        <ul class="text-black flex flex-col gap-2 text-xs mt-10">
+          <li>
+            <a
+              href="dashboard.html"
+              class="flex items-center w-full gap-2 p-3 text-xs sm:text-sm rounded-sm transition hover:bg-gray-100 font-bold"
+            >
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="17.75"
+                  cy="6.25"
+                  r="4.25"
+                  stroke="#000"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="6.25"
+                  cy="6.25"
+                  r="4.25"
+                  stroke="#000"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="17.75"
+                  cy="17.75"
+                  r="4.25"
+                  stroke="#000"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="6.25"
+                  cy="17.75"
+                  r="4.25"
+                  stroke="#000"
+                  stroke-width="1.5"
+                />
+              </svg>
+              داشبورد
+            </a>
+          </li>
+          <li>
+            <a
+              href="reserves.html"
+              class="flex items-center w-full gap-2 p-3 text-xs sm:text-sm rounded-sm transition hover:bg-gray-100 font-bold"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M19.5 12.0001V13.5001C19.5 17.6422 16.1421 21.0001 12 21.0001C7.85786 21.0001 4.5 17.6422 4.5 13.5001V8C4.5 5.23858 6.73858 3 9.5 3C12.2614 3 14.5 5.23858 14.5 8V13.5C14.5 14.8807 13.3807 16 12 16C10.6193 16 9.5 14.8807 9.5 13.5V9.5"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              رزرو ها
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="#"
+              class="flex items-center w-full gap-2 p-3 text-xs sm:text-sm rounded-sm transition hover:bg-gray-100 font-bold"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 9.20433C4 7.13117 4 6.09459 4.35762 5.25272C4.65634 4.54951 5.1278 3.94591 5.7219 3.50609C6.43314 2.97955 7.38764 2.79412 9.29665 2.42326C11.2817 2.03762 12.2743 1.8448 13.0467 2.15208C13.6884 2.40733 14.229 2.88944 14.5789 3.51833C15 4.27538 15 5.35327 15 7.50906V16.4909C15 18.6467 15 19.7246 14.5789 20.4817C14.229 21.1106 13.6884 21.5927 13.0467 21.8479C12.2743 22.1552 11.2817 21.9624 9.29665 21.5767C7.38764 21.2059 6.43314 21.0205 5.7219 20.4939C5.1278 20.0541 4.65634 19.4505 4.35762 18.7473C4 17.9054 4 16.8688 4 14.7957V9.20433Z"
+                  stroke="#000"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M15 19.7982C16.4473 19.9487 18.3999 20.4116 19.4375 19.0885C20 18.3712 20 17.2786 20 15.0934V8.90664C20 6.72138 20 5.62876 19.4375 4.91152C18.3999 3.58841 16.4473 4.05129 15 4.20177"
+                  stroke="#000"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M12 13L12 11"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19 19.7266L22 19.7266"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2 20H5"
+                  stroke="#000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              خروج
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <main class="w-full h-screen lg:h-full flex flex-col">
+        <header
+          class="p-3 h-fit flex justify-between"
+          style="
+            background-image: linear-gradient(
+              -135deg,
+              #21254e,
+              #232c58 19%,
+              #232c58 0,
+              #232c58 0,
+              #232d5a 23%,
+              #232d5a 0,
+              #24305d 40%,
+              #24305d 0,
+              #24305d 0,
+              #2b4a83 87%
+            ) !important;
+          "
+        >
+          <button id="open-sidebar" class="lg:hidden">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M2 6C2 4.11438 2 3.17157 2.58579 2.58579C3.17157 2 4.11438 2 6 2C7.88562 2 8.82843 2 9.41421 2.58579C10 3.17157 10 4.11438 10 6V8C10 9.88562 10 10.8284 9.41421 11.4142C8.82843 12 7.88562 12 6 12C4.11438 12 3.17157 12 2.58579 11.4142C2 10.8284 2 9.88562 2 8V6Z"
+                stroke="#ffffff"
+                stroke-width="1.5"
+              />
+              <path
+                d="M2 19C2 18.0681 2 17.6022 2.15224 17.2346C2.35523 16.7446 2.74458 16.3552 3.23463 16.1522C3.60218 16 4.06812 16 5 16H7C7.93188 16 8.39782 16 8.76537 16.1522C9.25542 16.3552 9.64477 16.7446 9.84776 17.2346C10 17.6022 10 18.0681 10 19C10 19.9319 10 20.3978 9.84776 20.7654C9.64477 21.2554 9.25542 21.6448 8.76537 21.8478C8.39782 22 7.93188 22 7 22H5C4.06812 22 3.60218 22 3.23463 21.8478C2.74458 21.6448 2.35523 21.2554 2.15224 20.7654C2 20.3978 2 19.9319 2 19Z"
+                stroke="#ffffff"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14 16C14 14.1144 14 13.1716 14.5858 12.5858C15.1716 12 16.1144 12 18 12C19.8856 12 20.8284 12 21.4142 12.5858C22 13.1716 22 14.1144 22 16V18C22 19.8856 22 20.8284 21.4142 21.4142C20.8284 22 19.8856 22 18 22C16.1144 22 15.1716 22 14.5858 21.4142C14 20.8284 14 19.8856 14 18V16Z"
+                stroke="#ffffff"
+                stroke-width="1.5"
+              />
+              <path
+                d="M14 5C14 4.06812 14 3.60218 14.1522 3.23463C14.3552 2.74458 14.7446 2.35523 15.2346 2.15224C15.6022 2 16.0681 2 17 2H19C19.9319 2 20.3978 2 20.7654 2.15224C21.2554 2.35523 21.6448 2.74458 21.8478 3.23463C22 3.60218 22 4.06812 22 5C22 5.93188 22 6.39782 21.8478 6.76537C21.6448 7.25542 21.2554 7.64477 20.7654 7.84776C20.3978 8 19.9319 8 19 8H17C16.0681 8 15.6022 8 15.2346 7.84776C14.7446 7.64477 14.3552 7.25542 14.1522 6.76537C14 6.39782 14 5.93188 14 5Z"
+                stroke="#ffffff"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+          <a href="index.html" class="flex items-center">
+            <img src="/assets/logo.png" alt="" width="70" />
+          </a>
+          <div class="flex items-center gap-2">
+            <div class="relative items-center hidden lg:flex">
+              <span
+                id="notification-count"
+                class="text-[10px] absolute top-0 -right-2 rounded-full h-[15px] w-[15px] bg-red-600 flex items-center justify-center"
+                >1</span
+              >
+              <button id="notifications-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5.15837 11.491C5.08489 12.887 5.16936 14.373 3.92213 15.3084C3.34164 15.7438 3 16.427 3 17.1527C3 18.1508 3.7818 19 4.8 19H19.2C20.2182 19 21 18.1508 21 17.1527C21 16.427 20.6584 15.7438 20.0779 15.3084C18.8306 14.373 18.9151 12.887 18.8416 11.491C18.6501 7.85223 15.6438 5 12 5C8.35617 5 5.34988 7.85222 5.15837 11.491Z"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.5 3.125C10.5 3.95343 11.1716 5 12 5C12.8284 5 13.5 3.95343 13.5 3.125C13.5 2.29657 12.8284 2 12 2C11.1716 2 10.5 2.29657 10.5 3.125Z"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M15 19C15 20.6569 13.6569 22 12 22C10.3431 22 9 20.6569 9 19"
+                    stroke="#ffffff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="notifications"
+                class="absolute top-full left-0 bg-white h-[300px] w-[250px] shadow-xl rounded-sm hidden overflow-y-auto border border-slate-300 z-40"
+              >
+                <h2
+                  class="p-3 border-b border-slate-300 text-black text-sm text-right"
+                >
+                  اعلانات
+                </h2>
+                <a
+                  href="#"
+                  data-notification
+                  class="border-b text-slate-600 text-xs p-3 inline-block"
+                >
+                  <p class="mb-2">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است.
+                  </p>
+                  <p>14 دی 1402</p>
+                </a>
+                <a
+                  href="#"
+                  data-notification
+                  class="border-b text-slate-600 text-xs p-3 inline-block"
+                >
+                  <p class="mb-2">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است.
+                  </p>
+                  <p>14 دی 1402</p>
+                </a>
+                <a
+                  href="#"
+                  data-notification
+                  class="border-b text-slate-600 text-xs p-3 inline-block"
+                >
+                  <p class="mb-2">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است.
+                  </p>
+                  <p>14 دی 1402</p>
+                </a>
+                <a
+                  href="#"
+                  data-notification
+                  class="border-b text-slate-600 text-xs p-3 inline-block"
+                >
+                  <p class="mb-2">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است.
+                  </p>
+                  <p>14 دی 1402</p>
+                </a>
+              </div>
+            </div>
+            <div class="relative">
+              <button class="flex items-center gap-1" data-profile-btn>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                    fill="#fff"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                  <path
+                    d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"
+                  ></path>
+                </svg>
+                <span class="text-xs">نام کاربری</span>
+              </button>
+              <div
+                data-profile-menu
+                class="absolute top-[120%] left-0 bg-white shadow-xl w-max h-fit hidden border z-40"
+              >
+                <ul class="text-sm text-black flex flex-col items-start">
+                  <li>
+                    <a
+                      href="edit-profile.html"
+                      class="px-4 py-3 flex items-center gap-2"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                      پروفایل
+                    </a>
+                  </li>
+                  <li>
+                    <button class="px-4 py-3 flex items-center gap-2">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          d="M8 12H16M8 12C8 11.2998 9.9943 9.99153 10.5 9.5M8 12C8 12.7002 9.9943 14.0085 10.5 14.5"
+                          stroke="#000000"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      خروج از حساب
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="p-8 w-full">
+          <div class="w-full bg-white p-4 rouned shadow-sm rounded">
+            <div class="text-black font-bold text-sm flex items-center gap-1">
+              <p>پنل مشتری</p>
+              /
+              <p class="text-gray-500">داشبورد</p>
+            </div>
+          </div>
+          <div class="flex flex-col md:grid grid-cols-2 gap-4 mt-6">
+            <div
+              class="relative w-full h-[110px] bg-center bg-no-repeat bg-cover rounded-[250px]"
+              style="background-image: url(/assets/shark.jpg)"
+            >
+              <div
+                class="absolute inset-0 bg-[rgba(0,0,0,.5)] rounded-[250px]"
+              ></div>
+              <div
+                class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 text-center"
+              >
+                <h1 class="mb-4">آکواریوم بزرگ انزلی</h1>
+                <a
+                  href=""
+                  class="text-xs md:text-sm bg-[#ffb702] py-2 px-8 rounded-full"
+                  >خرید بلیط</a
+                >
+              </div>
+            </div>
+            <div
+              class="relative w-full h-[110px] bg-center bg-no-repeat bg-cover rounded-[250px]"
+              style="background-image: url(/assets/giftshop.webp)"
+            >
+              <div
+                class="absolute inset-0 bg-[rgba(0,0,0,.5)] rounded-[250px]"
+              ></div>
+              <div
+                class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 text-center"
+              >
+                <h1 class="mb-4">گیفت شاپ</h1>
+                <a
+                  href=""
+                  class="text-xs md:text-sm bg-[#ffb702] py-2 px-8 rounded-full"
+                  >مشاهده جزییات</a
+                >
+              </div>
+            </div>
+            <div
+              class="relative w-full h-[110px] bg-center bg-no-repeat bg-cover rounded-[250px]"
+              style="background-image: url(/assets/shark.jpg)"
+            >
+              <div
+                class="absolute inset-0 bg-[rgba(0,0,0,.5)] rounded-[250px]"
+              ></div>
+              <div
+                class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 text-center"
+              >
+                <h1 class="mb-4">آکواریوم بزرگ انزلی</h1>
+                <a
+                  href=""
+                  class="text-xs md:text-sm bg-[#ffb702] py-2 px-8 rounded-full"
+                  >خرید بلیط</a
+                >
+              </div>
+            </div>
+            <div
+              class="relative w-full h-[110px] bg-center bg-no-repeat bg-cover rounded-[250px]"
+              style="background-image: url(/assets/giftshop.webp)"
+            >
+              <div
+                class="absolute inset-0 bg-[rgba(0,0,0,.5)] rounded-[250px]"
+              ></div>
+              <div
+                class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 text-center"
+              >
+                <h1 class="mb-4">گیفت شاپ</h1>
+                <a
+                  href=""
+                  class="text-xs md:text-sm bg-[#ffb702] py-2 px-8 rounded-full"
+                  >مشاهده جزییات</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer
+          class="w-full h-fit bg-[#222] p-3 text-xs mt-auto flex justify-between"
+        >
+          <p class="w-fit">© 2024 پنل مشتری، آکواریوم انزلی</p>
+          <p class="w-fit text-[10px]">
+            طراحی توسط
+            <a
+              href="https://giltarah.com/"
+              target="_blank"
+              class="text-blue-400 font-bold"
+              >گیل طراح</a
+            >
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

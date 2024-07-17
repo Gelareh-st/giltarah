@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <script src="src/js/cdn.tailwindcss.com.4.3.js"></script>
+    <script src="src/js/tailwind.js"></script>
+    <script src="src/js/main.js" defer></script>
+    <title>ورود / ثبت نام</title>
+  </head>
+  <body class="h-screen md:flex md:items-center md:justify-center bg-[#fbfbfb]">
+    <div class="h-full md:max-w-[500px] md:h-auto">
+      <div
+        class="p-4 border-b shadow-lg flex items-center md:shadow-none md:border-0 md:mb-4"
+      >
+        <button>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M19 5L5 19M5 5L19 19"
+              stroke="#d0021b"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col items-center justify-center h-full p-4">
+        <h1 class="font-bold text-2xl text-cent md:mb-6">ورود یا ثبت نام</h1>
+        <p class="text-slate-500 font-semibold text-sm mt-2">
+          برای ادامه شماره موبایل خود را وارد کنید.
+        </p>
+        <form action="" class="my-4 w-full space-y-4">
+          <input
+            dir="ltr"
+            type="text"
+            inputmode="numeric"
+            placeholder="0913213131"
+            class="border rounded text-sm p-4 placeholder:text-center w-full font-bold"
+          />
+          <p
+            class="flex items-center justify-center gap-1 text-center text-sm text-slate-600"
+          >
+            <span
+              ><svg
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+                />
+              </svg>
+            </span>
+            <span>
+              ورود یا ثبت نام شما به معنی پذیرش
+              <a href="#" class="underline text-black font-bold"
+                >شرایط و قوانین</a
+              >
+              سایت میباشد.
+            </span>
+          </p>
+          <button
+            type="submit"
+            class="bg-green-400 rounded py-4 px-6 text-white block w-full shadow-sm"
+          >
+            تایید و دریافت کد
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

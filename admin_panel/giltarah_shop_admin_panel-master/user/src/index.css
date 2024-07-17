@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "iran yekan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/eot/IRANYekanWebRegular.eot");
+  src: url("/assets/fonts/eot/IRANYekanWebRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/woff/IRANYekanWebRegular.woff") format("woff"),
+    url("/assets/fonts/woff2/IRANYekanWebRegular.woff2") format("woff2"),
+    url("/assets/fonts/ttf/IRANYekanWebRegular.ttf") format("truetype");
+}
+
+body {
+  font-family: "iran yekan", sans-serif;
+}
+
+/* width */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* width */
+#notifications::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#notifications::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+#notifications::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+#notifications::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+[data-dropdown].active {
+  ul {
+    display: flex !important;
+  }
+  span {
+    svg {
+      rotate: 180deg;
+    }
+  }
+}
+
+aside::-webkit-scrollbar {
+  width: 5px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: rgb(148, 255, 148);
+}
+
+[data-qr-modal]::backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
